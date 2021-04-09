@@ -1,7 +1,8 @@
+
 import login from "./components/Login/Login";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import signUp from "./components/SignUp/SignUp";
+import NavBar from "./components/NavBar";
 
 function App() {
   // function testGet() {
@@ -12,13 +13,14 @@ function App() {
 
   return (
     <div classname="App">
-      <h1 id="tittle">Creative Kritique</h1>
+      <NavBar isloggedin={true} username="initialtestuser" />
+      <h1 id="tittle">Kreative Kritique</h1>
       <Switch>
         <Route exact path="/login" component={login} />
         <Route exact path="/signup" component={signUp} />
       </Switch>
+
     </div>
   );
 }
-
 export default App;
