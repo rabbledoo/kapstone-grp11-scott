@@ -17,7 +17,7 @@ function App() {
       <h1 id="tittle">Kreative Kritique</h1>
       <Switch>
         <Route exact path="/login" component={login} />
-        <Route exact path="/signup" component={signUp} />
+        <Route exact path="/signup" component={SignUp} />
       </Switch>
 
     </div>
