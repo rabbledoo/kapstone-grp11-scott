@@ -1,0 +1,41 @@
+#welcome {
+  text-align: center;
+  color: blue;
+  font-size: 35px;
+}
+
+#login-form {
+  background-color: green;
+  width: 330px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+
+  border-radius: 20px;
+}
+#tittles {
+  color: yellow;
+  font-size: 20px;
+  text-align: center;
+  padding: 0;
+}
+#space {
+  padding: 10px;
+}
+
+#loginButton {
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+#inputBox {
+  width: 200px;
+  height: 25px;
+  border-radius: 10px;
+}
+#formOne {
+  left: 200px;
+}
