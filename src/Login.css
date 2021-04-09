@@ -1,8 +1,8 @@
-#welcome {
+/* #welcome {
   text-align: center;
   color: blue;
   font-size: 35px;
-}
+} */
 
 #login-form {
   background-color: green;
@@ -38,4 +38,8 @@
 }
 #formOne {
   left: 200px;
+}
+#tittle {
+  text-align: center;
+  color: blue;
 }

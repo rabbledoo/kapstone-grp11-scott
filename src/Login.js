@@ -3,7 +3,7 @@ import "./Login.css";
 function login(props) {
   return (
     <div id="loginTop">
-      <h1 id="welcome">welcome to app</h1>
+      {/* <h1 id="welcome">welcome to app</h1> */}
       <div id="formOne">
         <form id="login-form">
           <label>

@@ -5,7 +5,8 @@ import signUp from "./SignUp";
 
 function App() {
   return (
-    <div>
+    <div classname="App">
+      <h1 id="tittle">Creative Kritique</h1>
       <Switch>
         <Route exact path="/login" component={login} />
         <Route exact path="/signup" component={signUp} />
