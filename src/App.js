@@ -1,19 +1,16 @@
-
-import login from "./Login";
+import login from "./components/Login/Login";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import signUp from "./SignUp";
-
+import signUp from "./components/SignUp/SignUp";
 
 function App() {
-  function testGet() {
-    fetch("http:localhost:3000")
-      .then((res) => res.text())
-      .then((data) => console.log(data));
-  }
+  // function testGet() {
+  //   fetch("http:localhost:3000")
+  //     .then((res) => res.text())
+  //     .then((data) => console.log(data));
+  // }
 
   return (
-
     <div classname="App">
       <h1 id="tittle">Creative Kritique</h1>
       <Switch>
@@ -21,7 +18,6 @@ function App() {
         <Route exact path="/signup" component={signUp} />
       </Switch>
     </div>
-
   );
 }
 
