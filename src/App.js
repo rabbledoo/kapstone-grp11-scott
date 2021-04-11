@@ -3,6 +3,7 @@ import login from "./components/Login/Login";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import SignUp from "./components/SignUp/SignUp"
 
 function App() {
   // function testGet() {

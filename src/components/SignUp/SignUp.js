@@ -1,6 +1,6 @@
 import React from "react";
 //import "./Login.css";
-function signUp(props) {
+function SignUp(props) {
   return (
     <div id="SignUpTop">
       <h1 id="welcome">welcome to app</h1>
@@ -23,4 +23,4 @@ function signUp(props) {
     </div>
   );
 }
-export default signUp;
+export default SignUp;
