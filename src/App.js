@@ -1,9 +1,9 @@
-
 import login from "./components/Login/Login";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import SignUp from "./components/SignUp/SignUp"
+import SignUp from "./components/SignUp/SignUp";
+import Kard from "./components/UserCard";
 
 function App() {
   // function testGet() {
@@ -15,12 +15,11 @@ function App() {
   return (
     <div classname="App">
       <NavBar isloggedin={true} username="initialtestuser" />
-      <h1 id="tittle">Kreative Kritique</h1>
       <Switch>
         <Route exact path="/login" component={login} />
         <Route exact path="/signup" component={SignUp} />
+        <Route path="/Kard" component={Kard} />
       </Switch>
-
     </div>
   );
 }

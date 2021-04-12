@@ -1,26 +1,34 @@
 import React from "react";
+import { Form, Button } from "react-bootstrap";
 //import "./Login.css";
 function SignUp(props) {
   return (
-    <div id="SignUpTop">
-      <h1 id="welcome">welcome to app</h1>
-      <form id="SignUp-form">
-        <label>
-          <p id="sighnUpTittles">Username</p>
-          <input type="text" placeholder="Username" id="inputBox" />
-        </label>
-        <label>
-          <p id="signUpTittles">Password</p>
-          <input type="password" placeholder="Password" id="inputBox" />
-        </label>
-        <div>
-          <div id="space"></div>
-          <button type="submit" id="SignButton">
-            SignUp
-          </button>
-        </div>
-      </form>
-    </div>
+    <Form id="signup-body">
+      <h3 id="signUp-top">Sign-Up</h3>
+      <Form.Group controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group controlId="formBasicEmail">
+        <Form.Label>Display Name</Form.Label>
+        <Form.Control type="email" placeholder="Enter Display Name" />
+      </Form.Group>
+
+      <Form.Group controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
   );
 }
 export default SignUp;

@@ -1,28 +1,29 @@
 import React from "react";
 import "./Login.css";
+import { Form, Button } from "react-bootstrap";
 function login(props) {
   return (
-    <div id="loginTop">
-      {/* <h1 id="welcome">welcome to app</h1> */}
-      <div id="formOne">
-        <form id="login-form">
-          <label>
-            <p id="tittles">Username</p>
-            <input type="text" placeholder="Username" id="inputBox" />
-          </label>
-          <label>
-            <p id="tittles">Password</p>
-            <input type="password" placeholder="Password" id="inputBox" />
-          </label>
-          <div>
-            <div id="space"></div>
-            <button type="submit" id="loginButton">
-              Login
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+    <Form id="login-body">
+      <h3 id="login-top">Log-in</h3>
+      <Form.Group controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
   );
 }
 
