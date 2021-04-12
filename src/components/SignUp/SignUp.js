@@ -3,16 +3,20 @@ import React, { useState } from "react";
 function SignUp(props) {
   const [formData, setFormData] = useState({
     name: "",
-    displayName:"",
+    displayName: "",
     password: "",
   });
 
-  function submitHandler(e){
-    e.preventDefault()
-    fetch("http://localhost:3000/users",{
-      method:"POST",
-      body:JSON.stringify(formData)
-    })
+  function submitHandler(e) {
+    e.preventDefault();
+    fetch("http://localhost:4000/users", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(formData),
+    });
+  //   axios.post('url:/users', (req, res) => {
+  //     name, displayName, password
+  //     })
   }
 
   return (
@@ -20,19 +24,32 @@ function SignUp(props) {
       <h1 id="welcome">welcome to app</h1>
       <form id="SignUp-form" onSubmit={submitHandler}>
         <label>
-          <p id="sighnUpTittles">Username</p>
+          <p id="sighnUpTittles">Name</p>
           <input
             type="text"
-            value={formData.username}
-            placeholder="Username"
+            value={formData.name}
+            placeholder="Name"
             id="inputBox"
             onChange={(e) =>
               setFormData((prevFormData) => {
-                return { ...prevFormData, username: e.target.value };
+                return { ...prevFormData, name: e.target.value };
+              })
+            }
+          />
+          <p id="sighnUpTittles">Display Name</p>
+          <input
+            type="text"
+            value={formData.displayName}
+            placeholder="Display Name"
+            id="inputBox"
+            onChange={(e) =>
+              setFormData((prevFormData) => {
+                return { ...prevFormData, displayName: e.target.value };
               })
             }
           />
         </label>
+        <br></br>
         <label>
           <p id="signUpTittles">Password</p>
           <input
