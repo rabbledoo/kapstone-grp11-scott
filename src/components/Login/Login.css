@@ -1,45 +1,28 @@
-/* #welcome {
-  text-align: center;
-  color: blue;
-  font-size: 35px;
-} */
-
-#login-form {
-  background-color: green;
-  width: 330px;
-  margin: 40px auto;
+#login-body {
+  width: 400px;
+  height: 800px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  align-items: center;
-
-  border-radius: 20px;
-}
-#tittles {
-  color: yellow;
-  font-size: 20px;
-  text-align: center;
-  padding: 0;
-}
-#space {
-  padding: 10px;
+  margin-left: 700px;
+  margin-top: 70px;
 }
 
-#loginButton {
-  width: 60px;
-  height: 30px;
-  border-radius: 5px;
+#signup-body {
+  width: 400px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 700px;
+  margin-top: 70px;
 }
 
-#inputBox {
-  width: 200px;
-  height: 25px;
-  border-radius: 10px;
+#login-top {
+  font-family: "logoFont";
+  font-size: 45px;
 }
-#formOne {
-  left: 200px;
-}
-#tittle {
-  text-align: center;
-  color: blue;
+
+#signUp-top {
+  font-family: "logoFont";
+  font-size: 45px;
+  margin-bottom: 20px;
 }
