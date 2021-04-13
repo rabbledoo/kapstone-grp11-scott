@@ -16,8 +16,8 @@ const reducer = (state, action) => {
       return { user: action.payload };
     case LOGOUT:
       return { user: {} };
-    // case GET_MESSAGES:
-    //   return { ...state, messages: action.payload };
+    case GET_KRITIQUE:
+      return { ...state, kritiques: action.payload };
     default:
       return state;
   }

@@ -2,6 +2,7 @@ import login from "./components/Login/Login";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import signUp from "./components/SignUp/SignUp";
+import kritique from "./components/ChatRoom/ItemKritique";
 
 function App() {
   // function testGet() {
@@ -16,6 +17,7 @@ function App() {
       <Switch>
         <Route exact path="/login" component={login} />
         <Route exact path="/signup" component={signUp} />
+        <Route exact path="/kritique" component={kritique} />
       </Switch>
     </div>
   );
