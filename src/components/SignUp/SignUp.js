@@ -1,13 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 //import "./Login.css";
 function SignUp(props) {
+  const [formData, setFormData] = useState({
+    name: "",
+    displayName: "",
+    password: "",
+  });
+
+  function submitHandler(e) {
+    e.preventDefault();
+    fetch("http://localhost:4000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+    //   axios.post('url:/users', (req, res) => {
+    //     name, displayName, password
+    //     })
+  }
+
   return (
-    <Form id="signup-body">
+    <Form id="signup-body" onSubmit={submitHandler}>
       <h3 id="signUp-top">Sign-Up</h3>
       <Form.Group controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Label>Name</Form.Label>
+        <Form.Control
+          type="text"
+          value={formData.name}
+          placeholder="Name"
+          id="inputBox"
+          onChange={(e) =>
+            setFormData((prevFormData) => {
+              return { ...prevFormData, name: e.target.value };
+            })
+          }
+        />
         <Form.Text className="text-muted">
           We'll never share your email with anyone else.
         </Form.Text>
@@ -15,17 +43,37 @@ function SignUp(props) {
 
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Display Name</Form.Label>
-        <Form.Control type="email" placeholder="Enter Display Name" />
+        <Form.Control
+          type="text"
+          placeholder="Enter Display Name"
+          value={formData.displayName}
+          id="inputBox"
+          onChange={(e) =>
+            setFormData((prevFormData) => {
+              return { ...prevFormData, displayName: e.target.value };
+            })
+          }
+        />
       </Form.Group>
 
       <Form.Group controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+        <Form.Control
+          type="password"
+          placeholder="Password"
+          value={formData.password}
+          id="inputBox"
+          onChange={(e) =>
+            setFormData((prevFormData) => {
+              return { ...prevFormData, password: e.target.value };
+            })
+          }
+        />
       </Form.Group>
       <Form.Group controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" id="SignButton">
         Submit
       </Button>
     </Form>
