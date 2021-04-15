@@ -1,6 +1,6 @@
 import React from 'react';
-import kritique from "./components/chatRoom/kritique.js";
-import featuredKritique from "./components/ChatRoom/FeaturedKritique.js";
+import message from "./components/chatRoom/message.js";
+import featuredItem from "./components/ChatRoom/FeaturedItem.js";
 
 function ChatRoom(props) {
     
@@ -8,8 +8,8 @@ function ChatRoom(props) {
         
       <div>
         <h1 id="tittle">Chat Room</h1>
-         <Route exact path="/kritique" component={kritique} />
-         <Route exact path="/featuredKritique" component={featuredKritique} />
+         <Route exact path="/message" component={message} />
+         <Route exact path="/featuredItem" component={featuredItem} />
       </div>
 
     );

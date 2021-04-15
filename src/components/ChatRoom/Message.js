@@ -3,15 +3,15 @@ import { useStore } from "./";
 
 
 
-function Kritique(props) {
+function Message(props) {
   const dispatch = useStore((state) => state.dispatch);
   const components = useStore();
 
   useEffect(() => {
-    kritique().then((kritiqueData) => {
-      dispatch({ type: GET_KRITIQUE, payload: KritiqueData.kritique });
+    message().then((messageData) => {
+      dispatch({ type: GET_MESSAGE, payload: messageData.message });
     });
-  }, [dispatch, components.kritique]);
+  }, [dispatch, components.message]);
 
   useEffect(() => {
     console.log(window.localStorage);
@@ -25,10 +25,10 @@ function Kritique(props) {
       <div>
         <section className="ChatRoom">
           <ul className="ChatRoom">
-            {components.kritique &&
-              components.kritique.map((props) => (
-              <Kritique
-                 userName={props.userName}
+            {components.message &&
+              components.message.map((props) => (
+              <Message
+                 displayName={props.displayName}
                  text={props.text}
                  createdAt={props.createdAt}
             />
@@ -40,7 +40,7 @@ function Kritique(props) {
        );
      }
     
-export default Kritique;
+export default Message;
                  
 
 
