@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import {useStore} from "../../store/store";
+
 //import "./Login.css";
 function SignUp(props) {
+  const user = useStore((state) => state.user)
+  const setNewUser = useStore((state) => state.setNewUser)
+
   const [formData, setFormData] = useState({
     name: "",
     displayName: "",
@@ -9,15 +14,15 @@ function SignUp(props) {
   });
 
   function submitHandler(e) {
+    
+
     e.preventDefault();
-    fetch("http://localhost:4000/users", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-    //   axios.post('url:/users', (req, res) => {
-    //     name, displayName, password
-    //     })
+    // fetch("http://localhost:4000/users", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(formData),
+    // });
+    setNewUser("http://localhost:4000/users",formData)
   }
 
   return (
