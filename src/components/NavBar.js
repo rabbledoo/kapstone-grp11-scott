@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 
-export default function NavBar(props) {
+function NavBar(props) {
   return (
     <>
       <Navbar sticky="top" bg="primary" variant="dark">
@@ -29,3 +29,5 @@ export default function NavBar(props) {
     </>
   );
 }
+
+export default NavBar;

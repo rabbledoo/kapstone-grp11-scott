@@ -1,21 +1,15 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import "./UserCard.css";
-function Kard() {
+
+function UserCard(props) {
   return (
-    <div class="card">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-          <h4>Bob The Builder</h4>
-        </li>
-        <li class="list-group-item">
-          <h5>friends: 20</h5>
-        </li>
-        <li class="list-group-item">
-          <h5>joined Kreative Kritique: 2 weeks ago</h5>
-        </li>
-      </ul>
-    </div>
+    <Card style={{ width: "40rem" }}>
+      <Card.Title>{props.user.displayName}</Card.Title>
+      <Card.Body>
+        <Card.Subtitle>{"a.k.a. " + props.user.username}</Card.Subtitle>
+        <Card.Text>{props.user.about}</Card.Text>
+      </Card.Body>
+    </Card>
   );
 }
-export default Kard;
+export default UserCard;

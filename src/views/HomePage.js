@@ -1,23 +1,19 @@
-import React from 'react';
-import { useStore } from '../store/store';
-
-
-
+import React from "react";
+import NavBar from "../components/NavBar";
+import SignUp from "../components/SignUp";
+//import { useStore } from '../store/store';
 
 function HomePage(props) {
-    // const user = useStore((state) => state.user);
+  // const user = useStore((state) => state.user);
 
-    return (
-      <>
-      
-        <h1> Kreative Kritique </h1>
-        
-      </>
-    );
+  return (
+    <>
+      <NavBar />
+      <h1> Kreative Kritique </h1>
+      <p>Page Description Goes Here</p>
+      <SignUp />
+    </>
+  );
 }
 
 export default HomePage;
-
-
-        
-  
