@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 
 export default function NavBar(props) {
@@ -8,14 +8,16 @@ export default function NavBar(props) {
       <Navbar sticky="top" bg="primary" variant="dark">
         <Navbar.Brand>KreativeKritique</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link url="/">Home</Nav.Link>
+          <Nav.Link as="Link" path="/HomePage">
+            Home
+          </Nav.Link>
           <Nav.Link url="/chatroom">Chat Room</Nav.Link>
           <Nav.Link url="/directmessages">Direct Messages</Nav.Link>
           <NavDropdown title="User Information" id="collasible-nav-dropdown">
-            <NavDropdown.Item url="/userinfo/user/display">
+            <NavDropdown.Item path="/profileview">
               Your Profile
             </NavDropdown.Item>
-            <NavDropdown.Item url="/userinfo/user/edit">
+            <NavDropdown.Item path="/userinfo/user/edit">
               Edit Your Profile
             </NavDropdown.Item>
             <NavDropdown.Divider />
