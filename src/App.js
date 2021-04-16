@@ -1,6 +1,6 @@
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import HomePage from "./views/HomePage";
 import Profile from "./views/ProfileView";
 
