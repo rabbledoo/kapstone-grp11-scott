@@ -1,7 +1,21 @@
 import React from "react";
 import "./Login.css";
 import { Form, Button } from "react-bootstrap";
+
+
+
+
+
 function Login(props) {
+  
+  //finish login form functionality
+  //make sure it makes post request to right end point
+  //get token and store in the store
+  //what endpoints will need token
+  //what do we need to have token?
+  
+  
+  
   return (
     <Form id="login-body">
       <h3 id="login-top">Log-in</h3>
