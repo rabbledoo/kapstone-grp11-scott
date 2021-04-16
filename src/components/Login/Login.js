@@ -1,6 +1,7 @@
 import React from "react";
 import "./Login.css";
 import { Form, Button } from "react-bootstrap";
+
 function Login(props) {
   return (
     <Form id="login-body">
@@ -18,12 +19,12 @@ function Login(props) {
       <Form.Group controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
-
-      {/* <Form.Group controlId="formBasicCheckbox"> */}
-      {/* <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+      {/* <Form.Group controlId="formBasicCheckbox"> 
+      <Form.Check type="checkbox" label="Check me out" />
       </Form.Group> */}
-      <Button variant="secondary" type="submit">
 
+      <Button variant="secondary" type="submit">
         Submit
       </Button>
     </Form>
