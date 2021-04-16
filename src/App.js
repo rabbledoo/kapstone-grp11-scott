@@ -1,9 +1,8 @@
-import login from "./components/Login/Login";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import SignUp from "./components/SignUp/SignUp";
-import Kard from "./components/UserCard";
+import HomePage from "./views/HomePage";
+import Profile from "./views/ProfileView";
 
 function App() {
   // function testGet() {
@@ -16,9 +15,8 @@ function App() {
     <div classname="App">
       <NavBar isloggedin={true} username="initialtestuser" />
       <Switch>
-        <Route exact path="/login" component={login} />
-        <Route exact path="/signup" component={SignUp} />
-        <Route path="/Kard" component={Kard} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="/profile" component={Profile} />
       </Switch>
     </div>
   );

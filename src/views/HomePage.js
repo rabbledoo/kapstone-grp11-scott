@@ -1,5 +1,7 @@
 import React from 'react';
-import { useStore } from '../store/store';
+// import { useStore } from '../store/store';
+import Login from '../components/Login/Login'
+import SignUp from '../components/SignUp/SignUp';
 
 
 
@@ -11,6 +13,9 @@ function HomePage(props) {
       <>
       
         <h1> Kreative Kritique </h1>
+
+        <Login />
+        <SignUp />
         
       </>
     );

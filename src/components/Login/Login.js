@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css";
 import { Form, Button } from "react-bootstrap";
-function login(props) {
+function Login(props) {
   return (
     <Form id="login-body">
       <h3 id="login-top">Log-in</h3>
@@ -27,4 +27,4 @@ function login(props) {
   );
 }
 
-export default login;
+export default Login;
