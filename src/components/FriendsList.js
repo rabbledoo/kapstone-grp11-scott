@@ -1,15 +1,44 @@
 import React from "react";
+import "../components/FriendsList.css";
 
 function friendsList() {
   return (
     <ul class="list-group">
-      <li class="list-group-item active" aria-current="true">
-        An active item
+      <h1 class="space"></h1>
+      <li class="list-group-item1" aria-current="true">
+        <div className="box1">
+          <img src="" class="image" alt="Responsive image"></img>
+        </div>
+        <h4 class="friendName">friend name</h4>
       </li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
-      <li class="list-group-item">A fourth item</li>
-      <li class="list-group-item">And a fifth one</li>
+      <h1 class="space"></h1>
+      <li class="list-group-item1">
+        <div className="box1">
+          <img src="" class="image" alt="Responsive image"></img>
+        </div>
+        <h4 class="friendName">friend name</h4>
+      </li>
+      <h1 class="space"></h1>
+      <li class="list-group-item1">
+        <div className="box1">
+          <img src="" class="image" alt="Responsive image"></img>
+        </div>
+        <h4 class="friendName">friend name</h4>
+      </li>
+      <h1 class="space"></h1>
+      <li class="list-group-item1">
+        <div className="box1">
+          <img src="" class="image" alt="Responsive image"></img>
+        </div>
+        <h4 class="friendName">friend name</h4>
+      </li>
+      <h1 class="space"></h1>
+      <li class="list-group-item1">
+        <div className="box1">
+          <img src="" class="image" alt="Responsive image"></img>
+        </div>
+        <h4 class="friendName">friend name</h4>
+      </li>
     </ul>
   );
 }
