@@ -3,6 +3,7 @@ import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import Login from "../components/Login/Login";
 import SignUp from "../components/SignUp/SignUp";
+import "../bootstrap.css";
 
 function HomePage(props) {
   // const user = useStore((state) => state.user);
@@ -12,7 +13,7 @@ function HomePage(props) {
       <Container id="Homepage">
         <Row>
           <Col>
-            <h1> Kreative Kritique </h1>
+            <h1 className="siteName"> Kreative Kritique </h1>
             <p>
               A place to share your original creative works and get critiques
               from other creative people.
