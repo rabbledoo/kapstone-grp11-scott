@@ -16,12 +16,27 @@
   margin-top: 70px;
 }
 
+#updateUser-body {
+  width: 400px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 700px;
+  margin-top: 70px;
+}
+
 #login-top {
   font-family: "logoFont";
   font-size: 45px;
 }
 
 #signUp-top {
+  font-family: "logoFont";
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+#updateUser-top {
   font-family: "logoFont";
   font-size: 45px;
   margin-bottom: 20px;
