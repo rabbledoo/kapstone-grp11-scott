@@ -15,9 +15,7 @@ function UpdateUser(props) {
   });
 
   function submitHandler(e) {
-    
-
-    e.preventDefault();
+     e.preventDefault();
     setNewUser("http://localhost:4000/users",formData)
   }
 
@@ -59,7 +57,7 @@ function UpdateUser(props) {
         <Form.Label>Password</Form.Label>
         <Form.Control
           type="password"
-          placeholder="You need to type password for security purpose"
+          placeholder="Type your password"
           value={formData.password}
           id="inputBox"
           onChange={(e) =>
@@ -86,10 +84,10 @@ function UpdateUser(props) {
       </Form.Group>
 
       <Form.Group controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+        {/* //<Form.Check type="checkbox" label="Check me out" /> */}
       </Form.Group>
       <Button variant="primary" type="submit" id="SignButton">
-        Update My Profile
+        Update 
       </Button>
     </Form>
   );
