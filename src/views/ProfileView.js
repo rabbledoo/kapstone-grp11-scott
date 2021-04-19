@@ -1,12 +1,13 @@
-import React from 'react';
-import UserCard from '../components/UserCard/UserCard'
+import React from "react";
+import UserCard from "../components/UserCard/UserCard";
 
 function Profile(props) {
-    return(
+  return (
     <div>
-        <UserCard {...props}/>
+      <UserCard {...props} />
+      <FriendsList {...props} />
     </div>
-    )
+  );
 }
 
 export default Profile;
