@@ -1,5 +1,6 @@
 import React from "react";
 import UserCard from "../components/UserCard/UserCard";
+import FriendsList from "../components/FreindsList/FriendsList";
 
 function Profile(props) {
   return (

@@ -1,45 +1,24 @@
 import React from "react";
-import "../components/FriendsList.css";
+import { Image, ListGroup } from "react-bootstrap";
+import usersData from "../../assets/usersData.json";
 
 function FriendsList() {
+  //temporary user with friendslist
+  const user = usersData[0];
   return (
-    <ul class="list-group">
-      <h1 class="space"></h1>
-      <li class="list-group-item1" aria-current="true">
-        <div className="box1">
-          <img src="" class="image" alt="Responsive image"></img>
-        </div>
-        <h4 class="friendName">friend name</h4>
-      </li>
-      <h1 class="space"></h1>
-      <li class="list-group-item1">
-        <div className="box1">
-          <img src="" class="image" alt="Responsive image"></img>
-        </div>
-        <h4 class="friendName">friend name</h4>
-      </li>
-      <h1 class="space"></h1>
-      <li class="list-group-item1">
-        <div className="box1">
-          <img src="" class="image" alt="Responsive image"></img>
-        </div>
-        <h4 class="friendName">friend name</h4>
-      </li>
-      <h1 class="space"></h1>
-      <li class="list-group-item1">
-        <div className="box1">
-          <img src="" class="image" alt="Responsive image"></img>
-        </div>
-        <h4 class="friendName">friend name</h4>
-      </li>
-      <h1 class="space"></h1>
-      <li class="list-group-item1">
-        <div className="box1">
-          <img src="" class="image" alt="Responsive image"></img>
-        </div>
-        <h4 class="friendName">friend name</h4>
-      </li>
-    </ul>
+    <>
+      <ListGroup>
+        <ListGroup.Item>
+          <h2>Freinds:</h2>
+        </ListGroup.Item>
+        {user.freinds.map((friend) => (
+          <ListGroup.Item>
+            <Image src="../../assets/images/defaultuseravatar.png"></Image>
+            {friend}
+          </ListGroup.Item>
+        ))}
+      </ListGroup>
+    </>
   );
 }
 

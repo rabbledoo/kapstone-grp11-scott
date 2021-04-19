@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import HomePage from "./views/HomePage";
 import Profile from "./views/ProfileView";
-import FriendsList from "./components/FreindsList/FriendsList";
+import ChatRoom from "./views/ChatRoom";
 import DirectMessageView from "./views/DirectMessageView";
 
 function App() {
