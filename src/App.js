@@ -1,10 +1,12 @@
-import login from "./components/Login/Login";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import SignUp from "./components/SignUp/SignUp";
-import Kard from "./components/UserCard";
-import UpdateUser from "./components/UpdateUser/UpdateUser";
+
+
+import NavBar from "./components/NavBar/NavBar";
+import HomePage from "./views/HomePage";
+import Profile from "./views/ProfileView";
+import FriendsList from "./components/FriendsList";
+
 
 function App() {
   // function testGet() {
@@ -17,10 +19,10 @@ function App() {
     <div classname="App">
       <NavBar isloggedin={true} username="initialtestuser" />
       <Switch>
-        <Route exact path="/login" component={login} />
-        <Route exact path="/signup" component={SignUp} />
-        <Route path="/Kard" component={Kard} />
-        <Route path="/UpdateUser" component={UpdateUser} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/friends" component={FriendsList} />
+
       </Switch>
     </div>
   );

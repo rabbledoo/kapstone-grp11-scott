@@ -1,3 +1,4 @@
+
 #login-body {
   width: 400px;
   height: 800px;
@@ -27,13 +28,12 @@
 
 #login-top {
   font-family: "logoFont";
-  font-size: 45px;
+  font-size: larger;
 }
 
 #signUp-top {
   font-family: "logoFont";
-  font-size: 45px;
-  margin-bottom: 20px;
+  font-size: larger;
 }
 
 #updateUser-top {
