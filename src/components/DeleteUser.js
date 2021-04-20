@@ -1,21 +1,47 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { DeleteUser} from './';
-import { Form, Button } from 'react-bootstrap/Button';
+import { Button } from 'react-bootstrap/Button';
 
+//DeleteUser Component
 const DeleteUser = (state, action) => {
-  switch (action.type) {
-    case 'DELETE_USER':
-      return state.filter(
+  const dispatch = useStore((state) => state.dispatch);
+  const user = useStore((state) => state.user);
+    switch(action.type) {
+      case 'Delete_USER':
+          return <div></div>;
+    };
 
-
-      )
-  }
-    return 
-     <div>
-      <Button variant="info">Delete</Button>{' '}
-      
-     </div>;
-  };
-  
-  export default DeleteUser;
-  
+    //Event handler  
+    const handleDeleteUser = (e) => {
+      deleteUser(user.token, props.id);
+    };
+   //Fetch Request
+    export const deleteUser = async (token, userId) => {
+      const res = await fetch(baseURL + `user/${userId}`, {
+        method: 'DELETE',
+        headers: {
+          Authorization: "Bearer " + token,
+          "Content-Type": "application/json",
+        },
+        Body: JSON.stringify({ userId }),
+      });
+      return await res.json();
+    };
+//return using a card from react-bootstrap
+return 
+<>
+<Card style={{ width: '18rem' }}>
+  <Card.Body>
+    <Card.Title>Delete User</Card.Title>
+    <Card.Text>
+    Caution! Clicking the Button Below will Permanently Delete User!
+    </Card.Text>
+    <Button variant="danger" onClick={handleDeleteUser}>
+            Delete
+          </Button>
+  </Card.Body>
+</Card>
+</ >
+};
+//export DeleteUser component
+export default DeleteUser;   
