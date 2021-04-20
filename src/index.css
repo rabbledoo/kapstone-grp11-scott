@@ -2,12 +2,16 @@
   font-family: "logoFont";
   src: url("./assets/fonts/Lestaticcss-Zejl.woff") format("woff");
 }
+@font-face {
+  font-family: "defaultHandwriting";
+  src: url("./assets/fonts/ReallyFree-ALwl7.woff");
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "defaultHandwriting", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
