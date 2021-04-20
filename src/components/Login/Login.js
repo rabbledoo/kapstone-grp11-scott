@@ -22,10 +22,9 @@ function Login(props) {
     password: "",
   });
 
-  async function submitHandler(e) {
+  function submitHandler(e) {
     e.preventDefault();
-    const res = await setUserLogin("http://localhost:4000/login", formData);
-    console.log(res)
+    setUserLogin("http://localhost:4000/login", formData);
   }
 
   return (

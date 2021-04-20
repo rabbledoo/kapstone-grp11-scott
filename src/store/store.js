@@ -35,17 +35,18 @@ export const useStore = create(
           password: formData.password,
         }),
       })
-        .then((res) => console.log(res.json()))
-        // .then((data) =>
-        //   set({
-        //     user: {
-        //       id: data.id,
-        //       name: data.name,
-        //       displayName: data.displayName,
-        //       token: initialState.user.token,
-        //     },
-        //   })
-        // ).then(()=>console.log(initialState.user.token));
+        .then((res) => res.json())
+        .then((data) =>
+          set({
+            user: {
+              id: data.id,
+              name: data.name,
+              // displayName: data.displayName,
+              token: data.accessToken,
+            },
+          })
+        )
+        .then(() => console.log(initialState.user.token));
     },
     getProfile: (url) => {
       return fetch(url, {
