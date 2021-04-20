@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { DeleteUser} from './';
-import { Button } from 'react-bootstrap/Button';
+import { Button, Card } from 'react-bootstrap';
 
 //DeleteUser Component
 const DeleteUser = (state, action) => {
