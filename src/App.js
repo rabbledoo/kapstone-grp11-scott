@@ -5,7 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import HomePage from "./views/HomePage";
 import Profile from "./views/ProfileView";
-import FriendsList from "./components/FriendsList";
+import FriendsList from "./components/FriendsList/FriendsList";
 
 
 function App() {
