@@ -2,7 +2,7 @@ import React from "react";
 import UserCard from "../components/UserCard/UserCard";
 import FriendsList from "../components/FreindsList/FriendsList";
 
-function Profile(props) {
+function ProfileView(props) {
   return (
     <div>
       <UserCard {...props} />
@@ -11,4 +11,4 @@ function Profile(props) {
   );
 }
 
-export default Profile;
+export default ProfileView;
