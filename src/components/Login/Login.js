@@ -13,6 +13,7 @@ import { useStore } from "../../store/store";
 //figure out how we wish to store user information
 //determine how we pull info when we are logged in
 
+
 function Login(props) {
   const user = useStore((state) => state.user);
   const setUserLogin = useStore((state) => state.setUserLogin);
@@ -32,6 +33,7 @@ function Login(props) {
       <h3 id="login-top">Log-in</h3>
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Name</Form.Label>
+
         <Form.Control
           type="text"
           placeholder="Enter name"
@@ -44,6 +46,7 @@ function Login(props) {
         {/* <Form.Text className="text-muted">
           We'll never share your email with anyone else.
         </Form.Text> */}
+
       </Form.Group>
 
       <Form.Group controlId="formBasicPassword">
@@ -58,10 +61,11 @@ function Login(props) {
           }
         />
       </Form.Group>
-      {/* <Form.Group controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+      {/* <Form.Group controlId="formBasicCheckbox"> 
+      <Form.Check type="checkbox" label="Check me out" />
       </Form.Group> */}
-      <Button variant="primary" type="submit">
+
+      <Button variant="secondary" type="submit">
         Submit
       </Button>
     </Form>

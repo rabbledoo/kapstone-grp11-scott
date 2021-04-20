@@ -1,3 +1,4 @@
+
 #login-body {
   width: 400px;
   height: 800px;
@@ -16,12 +17,26 @@
   margin-top: 70px;
 }
 
+#updateUser-body {
+  width: 400px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 700px;
+  margin-top: 70px;
+}
+
 #login-top {
   font-family: "logoFont";
-  font-size: 45px;
+  font-size: larger;
 }
 
 #signUp-top {
+  font-family: "logoFont";
+  font-size: larger;
+}
+
+#updateUser-top {
   font-family: "logoFont";
   font-size: 45px;
   margin-bottom: 20px;
