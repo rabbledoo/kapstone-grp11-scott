@@ -16,7 +16,7 @@ function App() {
   // }
 
   return (
-    <div classname="App">
+    <div className="App">
       <NavBar isloggedin={true} username="initialtestuser" />
       <Switch>
         <Route exact path="/" component={HomePage} />

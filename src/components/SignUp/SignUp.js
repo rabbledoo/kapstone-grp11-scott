@@ -15,11 +15,6 @@ function SignUp(props) {
 
   function submitHandler(e) {
     e.preventDefault();
-    // fetch("http://localhost:4000/users", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(formData),
-    // });
     setNewUser("http://localhost:4000/users", formData);
   }
 
