@@ -17,13 +17,61 @@ export const useStore = create(
       })
         .then((res) => res.json())
         .then((data) =>
-          set( { 
-            user: { name: data.name, displayName: data.displayName, token: initialState.user.token },
+          set({
+            user: {
+              name: data.name,
+              displayName: data.displayName,
+              token: initialState.user.token,
+            },
+          })
+        );
+    },
+    setUserLogin: (url, formData) => {
+      return fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          password: formData.password,
+        }),
+      })
+        .then((res) => console.log(res.json()))
+        // .then((data) =>
+        //   set({
+        //     user: {
+        //       id: data.id,
+        //       name: data.name,
+        //       displayName: data.displayName,
+        //       token: initialState.user.token,
+        //     },
+        //   })
+        // ).then(()=>console.log(initialState.user.token));
+    },
+    getProfile: (url) => {
+      return fetch(url, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((data) =>
+          set({
+            user: {
+              name: data.name,
+              displayName: data.displayName,
+            },
           })
         );
     },
   }))
 );
+
+// export const getUserInfo = (username) => {
+//   console.log(username);
+//   return fetch(baseURL + `users/${username}`)
+//     .then((res) => res.json())
+
+//     .catch((error) => console.log(error));
+// };
 
 // return fetch(baseURL + "users", {
 //   method: "POST",
