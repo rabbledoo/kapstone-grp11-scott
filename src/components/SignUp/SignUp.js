@@ -26,13 +26,13 @@ function SignUp(props) {
   return (
     <Form id="signup-body" onSubmit={submitHandler}>
       <h3 id="signUp-top">Sign-Up</h3>
-      <Form.Group controlId="formBasicEmail">
+      <Form.Group>
         <Form.Label>Name</Form.Label>
         <Form.Control
           type="text"
           value={formData.name}
           placeholder="Name"
-          id="inputBox"
+          id="inputBoxName"
           onChange={(e) =>
             setFormData((prevFormData) => {
               return { ...prevFormData, name: e.target.value };
@@ -40,13 +40,13 @@ function SignUp(props) {
           }
         />
       </Form.Group>
-      <Form.Group controlId="formBasicEmail">
+      <Form.Group>
         <Form.Label>Display Name</Form.Label>
         <Form.Control
           type="text"
           placeholder="Enter Display Name"
           value={formData.displayName}
-          id="inputBox"
+          id="inputBoxDisplayName"
           onChange={(e) =>
             setFormData((prevFormData) => {
               return { ...prevFormData, displayName: e.target.value };
@@ -55,13 +55,13 @@ function SignUp(props) {
         />
       </Form.Group>
 
-      <Form.Group controlId="formBasicPassword">
+      <Form.Group>
         <Form.Label>Password</Form.Label>
         <Form.Control
           type="password"
           placeholder="Password"
           value={formData.password}
-          id="inputBox"
+          id="inputBoxPassword"
           onChange={(e) =>
             setFormData((prevFormData) => {
               return { ...prevFormData, password: e.target.value };
@@ -69,9 +69,6 @@ function SignUp(props) {
           }
         />
       </Form.Group>
-      {/* <Form.Group controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group> */}
       <Button variant="secondary" type="submit" id="SignButton">
         Submit
       </Button>
@@ -79,3 +76,4 @@ function SignUp(props) {
   );
 }
 export default SignUp;
+     

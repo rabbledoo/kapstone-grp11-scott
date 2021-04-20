@@ -18,16 +18,14 @@ function Login(props) {
       <Form.Group controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
-
-      {/* <Form.Group controlId="formBasicCheckbox"> */}
-      {/* <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group> */}
+      </Form.Group>
       <Button variant="secondary" type="submit">
-
         Submit
       </Button>
     </Form>
   );
 }
+     
+
 
 export default Login;
