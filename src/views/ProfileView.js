@@ -1,12 +1,12 @@
-import React from 'react';
-import UserCard from '../components/UserCard/UserCard'
+import React from "react";
+import UserCard from "../components/UserCard/UserCard";
 
-function Profile(props) {
-    return(
+function ProfileView(props) {
+  return (
     <div>
-        <UserCard {...props}/>
+      <UserCard {...props} />
     </div>
-    )
+  );
 }
 
-export default Profile;
+export default ProfileView;
