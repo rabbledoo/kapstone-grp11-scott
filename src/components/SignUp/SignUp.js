@@ -23,12 +23,16 @@ function SignUp() {
   };
 
   return (
+     <h3 id="signUp-top">Sign-Up</h3>
+
     <Form onSubmit={handleSubmit}>
       <Form.Group controlId="name">
+
         <Form.Label>Name</Form.Label>
         <Form.Control
           type="text"
           value={formData.name}
+
           placeholder="Username"
           onChange={handleChange}
         />
@@ -38,6 +42,7 @@ function SignUp() {
         <Form.Control
           type="text"
           value={formData.displayName}
+
           placeholder="Display Name"
           onChange={handleChange}
         />
@@ -52,9 +57,8 @@ function SignUp() {
         />
       </Form.Group>
       <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+
   );
 }
 export default SignUp;
+     
