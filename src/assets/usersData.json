@@ -1,0 +1,35 @@
+[
+  {
+    "id": "0",
+    "username": "intialtestuser",
+    "displayname": "Initial T. User",
+    "password": "abc123",
+    "freinds": ["othertestuser", "secondtestuser"],
+    "about": "A test user",
+    "avatarlocation": "../assets/images/defaultuseravatar.png",
+    "email": "test@test.com",
+    "token": "0=Yes"
+  },
+  {
+    "id": "1",
+    "username": "othertestuser",
+    "displayname": "Other T. User",
+    "password": "abc123",
+    "freinds": ["secondtestuser"],
+    "about": "An other test user",
+    "avatarlocation": "../assets/images/defaultuseravatar2.png",
+    "email": "test3@test.com",
+    "token": "1=Yes"
+  },
+  {
+    "id": "2",
+    "username": "secondtestuser",
+    "displayname": "Other T. User",
+    "password": "abc123",
+    "freinds": ["othertestuser"],
+    "about": "A second test user",
+    "avatarlocation": "../assets/images/defaultuseravatar.png",
+    "email": "test2@test.com",
+    "token": "2=Yes"
+  }
+]

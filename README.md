@@ -68,3 +68,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+References: https://mongoosejs.com/docs/api.html#model_Model.findById , https://www.youtube.com/watch?v=fgTGADljAeg , https://kenzie.zoom.us/rec/play/YDLicNFnO2u2Q8NAI44H4zxoWS-CRrPNz3zdd7SkGt49onokqufrDbtfzKeW-UwS8CaVeCXHyIg6J25E.S_uClmcTrhO_D0nl?continueMode=true&_x_zm_rtaid=IBKi4f0ATYqVca2r8ET3FA.1618328331026.0bcbc6279eeef7e811e7bd09856f0488&_x_zm_rhtaid=793 , https://react-bootstrap.netlify.app/components/cards/ , https://github.com/pmndrs/zustand , https://cloud.mongodb.com/v2/60743d03216356502b7e274a#clusters/connect?clusterId=Cluster0
+
+Authors: Pete Mayor, DeQuan Mitchell, Mike A. (my facilitator), billy yip
