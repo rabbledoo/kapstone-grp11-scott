@@ -6,7 +6,8 @@ function DeleteUser(props) {
   const deleteUser = useStore((state) => state.user);
 
   const deletingUser = useState({
-    
+    userName: "",
+    password: "",
   });
     
   

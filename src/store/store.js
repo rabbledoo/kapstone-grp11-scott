@@ -4,12 +4,13 @@ import { devtools, redux } from "zustand/middleware";
 const initialState = {
   user: { token: "" },
   displayName: "",
-  messages: [],
+  messages: [id, createdBy, title, message, createdAt],
 };
 
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 export const SIGNUP = "SIGNUP";
+export const GETMESSAGE = "GETMESSAGE"
 export const MESSAGELIST = "MESSAGELIST";
 export const MESSAGEPOST = "MESSAGEPOST";
 export const USERPROFILE = "USERPROFILE";
@@ -33,6 +34,8 @@ const reducer = (state, action) => {
       return {
         messages: action.payload.messages,
       };
+    case GET_MESSAGES:
+      return { messages: action.payload };
     case MESSAGEPOST:
       return {
         inputText: action.payload,

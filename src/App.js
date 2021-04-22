@@ -17,6 +17,8 @@ function App() {
           <Route exact path="/profile" component={ProfileView} />
           <Route path="/chatroom" component={ChatRoom} />
           <Route path="/directmessage" component={DirectMessageView} />
+          <Route exact path="/messages" component={MessageList} />
+        <Route exact path="/messages/:id" render={(props) => <Message {...props} />} />
         </Switch>
       </BrowserRouter>
     </div>
