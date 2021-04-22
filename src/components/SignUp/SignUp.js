@@ -1,73 +1,57 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import { useStore } from "../../store/store";
+// import { useStore } from "../../store/store";
 
 //import "./Login.css";
-function SignUp(props) {
-  const user = useStore((state) => state.user);
-  const setNewUser = useStore((state) => state.setNewUser);
-
+function SignUp() {
   const [formData, setFormData] = useState({
     name: "",
     displayName: "",
     password: "",
   });
-
-  function submitHandler(e) {
+  const handleChange = (e) => {
+    const inputName = e.target.name;
+    const inputValue = e.target.value;
+    setFormData((formData) => ({
+      ...formData,
+      [inputName]: inputValue,
+    }));
+  };
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setNewUser("http://localhost:4000/users", formData);
-  }
+    console.log(formData);
+  };
 
   return (
-    <Form id="signup-body" onSubmit={submitHandler}>
-      <h3 id="signUp-top">Sign-Up</h3>
-      <Form.Group controlId="formBasicEmail">
+    <Form onSubmit={handleSubmit}>
+      <Form.Group controlId="name">
         <Form.Label>Name</Form.Label>
         <Form.Control
           type="text"
           value={formData.name}
-          placeholder="Name"
-          id="inputBox"
-          onChange={(e) =>
-            setFormData((prevFormData) => {
-              return { ...prevFormData, name: e.target.value };
-            })
-          }
+          placeholder="Username"
+          onChange={handleChange}
         />
       </Form.Group>
-      <Form.Group controlId="formBasicEmail">
+      <Form.Group controlId="displayName">
         <Form.Label>Display Name</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Enter Display Name"
           value={formData.displayName}
-          id="inputBox"
-          onChange={(e) =>
-            setFormData((prevFormData) => {
-              return { ...prevFormData, displayName: e.target.value };
-            })
-          }
+          placeholder="Display Name"
+          onChange={handleChange}
         />
       </Form.Group>
-
-      <Form.Group controlId="formBasicPassword">
+      <Form.Group controlId="password">
         <Form.Label>Password</Form.Label>
         <Form.Control
           type="password"
-          placeholder="Password"
           value={formData.password}
-          id="inputBox"
-          onChange={(e) =>
-            setFormData((prevFormData) => {
-              return { ...prevFormData, password: e.target.value };
-            })
-          }
+          placeholder="Password"
+          onChange={handleChange}
         />
       </Form.Group>
-      {/* <Form.Group controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group> */}
-      <Button variant="secondary" type="submit" id="SignButton">
+      <Button variant="primary" type="submit">
         Submit
       </Button>
     </Form>
