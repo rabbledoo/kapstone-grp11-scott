@@ -2,9 +2,7 @@ import create from "zustand";
 import { devtools, redux } from "zustand/middleware";
 
 const initialState = {
-  user: "",
-  token: "",
-  displayName: "",
+  user: { _id: "", name: "", displayName: "" },
   messages: [
     {
       id: 0,
@@ -39,9 +37,10 @@ const reducer = (state, action) => {
     case LOGOUT:
       return { user: "" };
     case SIGNUP:
+      console.log(action.payload);
       return {
-        name: action.payload,
-        displayName: action.payload,
+        ...state,
+        user: action.payload,
       };
     case GETMESSAGES:
       return state.messages;
@@ -63,4 +62,4 @@ const reducer = (state, action) => {
 };
 
 // create useStore hook
-export const useStore = create(devtools(redux(reducer, initialState)));
+export const [useStore, store] = create(devtools(redux(reducer, initialState)));

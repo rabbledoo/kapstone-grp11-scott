@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useReducer } from "react";
 import { Form, Button } from "react-bootstrap";
-import { SIGNUP, useStore } from "../../store/store";
+import { SIGNUP, store } from "../../store/store";
 import { signUpRequest } from "../../fetchRequests";
 
 //import "./Login.css";
@@ -21,10 +21,10 @@ function SignUp() {
   const handleSignUp = (e) => {
     e.preventDefault();
     signUpRequest(
-      formData.username,
+      formData.name,
       formData.displayName,
       formData.password
-    ).then((userData) => dispatch({ type: SIGNUP, payload: userData }));
+    ).then((userData) => store.dispatch({ type: SIGNUP, payload: userData }));
   };
 
   return (

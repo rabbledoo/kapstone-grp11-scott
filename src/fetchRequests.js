@@ -1,20 +1,15 @@
 const baseURL = `https://pretty-branched-skink.glitch.me/`;
 //
-export const signUpRequest = (username, displayName, password) => {
+export const signUpRequest = (name, displayName, password) => {
   return fetch(baseURL + "users", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      name: "username",
-      displayName: "displayName",
-      password: "password",
+      name,
+      displayName,
+      password,
     }),
-  })
-    .then((res) => res.json())
-    .then((res) => {
-      console.log(res);
-      return res;
-    });
+  }).then((res) => res.json());
 };
 // export const postMessage = (message) => {
 //   return fetch(baseURL + "messages", {
