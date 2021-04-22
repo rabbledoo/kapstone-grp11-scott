@@ -13,10 +13,9 @@ import { useStore } from "../../store/store";
 //figure out how we wish to store user information
 //determine how we pull info when we are logged in
 
-
 function Login(props) {
-  const user = useStore((state) => state.user);
-  const setUserLogin = useStore((state) => state.setUserLogin);
+  // const user = useStore((state) => state.user);
+  // const setUserLogin = useStore((state) => state.setUserLogin);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -25,15 +24,14 @@ function Login(props) {
 
   function submitHandler(e) {
     e.preventDefault();
-    setUserLogin("http://localhost:4000/login", formData);
+    // setUserLogin("http://localhost:4000/login", formData);
   }
 
   return (
     <Form id="login-body" onSubmit={submitHandler}>
       <h3 id="login-top">Log-in</h3>
-      <Form.Group controlId="formBasicEmail">
+      <Form.Group controlId="usernamelogin">
         <Form.Label>Name</Form.Label>
-
         <Form.Control
           type="text"
           placeholder="Enter name"
@@ -43,14 +41,9 @@ function Login(props) {
             })
           }
         />
-        {/* <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text> */}
-
       </Form.Group>
 
-      <Form.Group controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
+      <Form.Group controlId="passwordLogin">
         <Form.Control
           type="password"
           placeholder="Password"
@@ -61,9 +54,6 @@ function Login(props) {
           }
         />
       </Form.Group>
-      {/* <Form.Group controlId="formBasicCheckbox"> 
-      <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group> */}
 
       <Button variant="secondary" type="submit">
         Submit

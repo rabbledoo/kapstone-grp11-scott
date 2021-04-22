@@ -4,39 +4,46 @@ import { postMessage } from "../fetchRequests.js";
 import { useStore } from "../store/store";
 
 const MessagePost = (props) => {
-const user = useStore((state) => state.user);
-const [message, setMessage] = useState({
+  const [message, setMessage] = useState({
     id: "",
     createdBy: "",
     title: "",
     message: "text",
     createdAt: "",
-});
+  });
 
-const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    postMessage(user.token, message.text).then(console.log(message.text));
-};
+    console.log(message.text);
+  };
 
-const handleChange = (e) => {
+  const handleChange = (e) => {
     let inputName = e.target.name;
     let inputValue = e.target.value;
     setMessage((state) => ({ ...state, [inputName]: inputValue }));
-};
+  };
 
-return (
+  return (
     <div>
-    <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="exampleForm.ControlTextarea1">  <Form.Label>Type your message here:</Form.Label>
-        <Form.Control name="text" as="textarea" rows={3} onChange={handleChange} value={message.text} />
+      <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          {" "}
+          <Form.Label>Type your message here:</Form.Label>
+          <Form.Control
+            name="text"
+            as="textarea"
+            rows={3}
+            onChange={handleChange}
+            value={message.text}
+          />
         </Form.Group>
         <Button variant="primary" type="submit">
-        Submit
+          Submit
         </Button>
-    </Form>
-    <br></br>
+      </Form>
+      <br></br>
     </div>
-);
+  );
 };
 
 export default MessagePost;

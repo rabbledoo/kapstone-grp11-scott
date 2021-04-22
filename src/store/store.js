@@ -2,16 +2,31 @@ import create from "zustand";
 import { devtools, redux } from "zustand/middleware";
 
 const initialState = {
-  user: { token: "" },
+  user: "",
+  token: "",
   displayName: "",
-  messages: [id, createdBy, title, message, createdAt],
+  messages: [
+    {
+      id: 0,
+      createdBy: "intialTestUsr",
+      subject: "Subject1",
+      message: "text1",
+      createdAt: "11:36 am",
+    },
+    {
+      id: 1,
+      createdBy: "intialTestUsr",
+      subject: "Subject2",
+      message: "text2",
+      createdAt: "11:36 pm",
+    },
+  ],
 };
 
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 export const SIGNUP = "SIGNUP";
-export const GETMESSAGE = "GETMESSAGE"
-export const MESSAGELIST = "MESSAGELIST";
+export const GETMESSAGES = "GETMESSAGES";
 export const MESSAGEPOST = "MESSAGEPOST";
 export const USERPROFILE = "USERPROFILE";
 export const UPDATEUSERPROFILE = "UPDATEUSERPROFILE";
@@ -22,20 +37,14 @@ const reducer = (state, action) => {
     case LOGIN:
       return { user: action.payload };
     case LOGOUT:
-      return { user: {} };
+      return { user: "" };
     case SIGNUP:
       return {
-        username: action.payload,
-        //user: action.payload.user,
+        name: action.payload,
         displayName: action.payload,
-        //displayName: action.payload.displayName,
       };
-    case MESSAGELIST:
-      return {
-        messages: action.payload.messages,
-      };
-    case GET_MESSAGES:
-      return { messages: action.payload };
+    case GETMESSAGES:
+      return state.messages;
     case MESSAGEPOST:
       return {
         inputText: action.payload,

@@ -1,8 +1,14 @@
 import React from "react";
+import MessageList from "../components/Message/MessageList";
 import "../bootstrap.css";
 
 function ChatRoom() {
-  return <h1>ChatRoom View Goes Here!</h1>;
+  return (
+    <div>
+      <h1>Current Kritiques:</h1>
+      <MessageList />
+    </div>
+  );
 }
 
 export default ChatRoom;
