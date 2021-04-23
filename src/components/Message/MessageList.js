@@ -1,25 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import MessageItem from "./MessageItem";
-import { useStore } from "../../store/store";
-import { GETMESSAGES } from "../../store/store";
-import { ListGroup } from "react-bootstrap";
+import { store } from "../../store/store";
+// import { GETMESSAGES } from "../../store/store";
 
-function MessageList() {
-  const dispatch = useStore((state) => state.dispatch);
-
+const MessageList = () => {
+  const [messages, setMessages] = useState([]);
+  setMessages(store.messages);
   return (
     <>
       <div>
         <section className="Messages">
-          <ListGroup>
-            {dispatch({ type: GETMESSAGES }).map((message) => (
-              <MessageItem message={message} />
-            ))}
-          </ListGroup>
+          {messages.map((message) => (
+            <MessageItem message={message} />
+          ))}
         </section>
       </div>
     </>
   );
-}
+};
 
 export default MessageList;

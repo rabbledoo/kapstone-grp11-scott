@@ -1,12 +1,12 @@
 import React from "react";
-// import { useStore } from '../store/store';
+import { useStore } from "../store/store";
 import { Container, Col, Row } from "react-bootstrap";
 import Login from "../components/Login/Login";
 import SignUp from "../components/SignUp/SignUp";
 import "../bootstrap.css";
 
 function HomePage(props) {
-  // const user = useStore((state) => state.user);
+  const user = useStore((state) => state.user);
 
   return (
     <div id="HomePage">
@@ -23,21 +23,15 @@ function HomePage(props) {
             </p>
             <ul>
               <li>Chatroom where you can discuss and critique works</li>
-              <li>
-                Coming Soon: A Direct Messaging system so you can have pritvate
-                conversations with other users.
-              </li>
-              <li>Coming Soon: Friends List, Avatar,</li>
+              <li>Coming Soon: Direct Private Messaging</li>
+              <li>Coming Soon: Friends Lists And Avatars</li>
             </ul>
+            <h2>Login, or Sign Up for a Free Account!</h2>
           </Col>
         </Row>
         <Row>
-          <Col>
-            <Login />
-          </Col>
-          <Col>
-            <SignUp />
-          </Col>
+          <Col>{!user.name ? <Login /> : "Successfully Logged In."} </Col>
+          <Col>{!user.name ? <SignUp /> : " "}</Col>
         </Row>
       </Container>
     </div>

@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from "react";
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { SIGNUP, store } from "../../store/store";
 import { signUpRequest } from "../../fetchRequests";

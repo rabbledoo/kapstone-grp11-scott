@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import { useStore } from "../../store/store";
 
 export default function NavBar(props) {
-  //temporary username for functionality testing.
-  // const username = useStore((state) => state.user);
+  const user = useStore((state) => state.user);
 
   return (
     <>
@@ -18,11 +17,18 @@ export default function NavBar(props) {
           <Nav.Link as={Link} to="/chatroom">
             Chat Room
           </Nav.Link>
-          <Nav.Link as={Link} to="/profile">
-            Your Profile
+          <Nav.Link as={Link} to="/userlist">
+            User List
           </Nav.Link>
         </Nav>
         <Nav className="justify-content-end">
+          {user.displayName ? (
+            <Nav.Link as={Link} to="/profile">
+              Hello, {user.displayName}!
+            </Nav.Link>
+          ) : (
+            "   "
+          )}{" "}
           <Button variant="secondary">Logout</Button>
         </Nav>
       </Navbar>

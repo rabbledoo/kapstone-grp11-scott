@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./Login.css";
 import { Form, Button } from "react-bootstrap";
-import { useStore } from "../../store/store";
+import "./Login.css";
+import { LOGIN, store } from "../../store/store";
+import { loginRequest } from "../../fetchRequests";
 
 //finish login form functionality
 //make sure it makes post request to right end point
@@ -24,7 +25,9 @@ function Login(props) {
 
   function submitHandler(e) {
     e.preventDefault();
-    // setUserLogin("http://localhost:4000/login", formData);
+    loginRequest(formData.name, formData.password).then((userData) =>
+      store.dispatch({ type: LOGIN, payload: userData })
+    );
   }
 
   return (

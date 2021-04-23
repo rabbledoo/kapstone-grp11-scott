@@ -3,6 +3,7 @@ import { devtools, redux } from "zustand/middleware";
 
 const initialState = {
   user: { _id: "", name: "", displayName: "" },
+  userList: [],
   messages: [
     {
       id: 0,
@@ -25,6 +26,7 @@ export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 export const SIGNUP = "SIGNUP";
 export const GETMESSAGES = "GETMESSAGES";
+export const GETUSERLIST = "GETUSERLIST";
 export const MESSAGEPOST = "MESSAGEPOST";
 export const USERPROFILE = "USERPROFILE";
 export const UPDATEUSERPROFILE = "UPDATEUSERPROFILE";
@@ -35,22 +37,27 @@ const reducer = (state, action) => {
     case LOGIN:
       return { user: action.payload };
     case LOGOUT:
-      return { user: "" };
+      return { user: {} };
     case SIGNUP:
-      console.log(action.payload);
       return {
         ...state,
         user: action.payload,
       };
     case GETMESSAGES:
       return state.messages;
+    case GETUSERLIST:
+      return {
+        ...state,
+        userList: action.payload,
+      };
     case MESSAGEPOST:
       return {
         inputText: action.payload,
       };
     case USERPROFILE:
       return {
-        userInfo: action.payload.user,
+        ...state,
+        user: action.payload.user,
       };
     case UPDATEUSERPROFILE:
       return {
