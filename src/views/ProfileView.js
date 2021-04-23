@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import UserCard from "../components/UserCard/UserCard";
 import { getUser } from "../fetchRequests";
 import { USERPROFILE, store, useStore } from "../store/store";
 
 function ProfileView() {
-  const [user, setUser] = useState({});
-  const id = useStore((state) => state.user._id);
-  getUser(id).then((user) => {
+  const user = useStore((state) => state.user);
+
+  getUser(user._id).then((user) => {
     store.dispatch({ type: USERPROFILE, payload: user });
-    setUser(user);
   });
 
   return (
     <div>
-      <UserCard user={user} />
+      <UserCard user={store.user} />
     </div>
   );
 }

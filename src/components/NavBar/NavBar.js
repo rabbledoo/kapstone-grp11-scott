@@ -5,7 +5,9 @@ import { useStore } from "../../store/store";
 
 export default function NavBar(props) {
   const user = useStore((state) => state.user);
-
+  const handleLogout = () => {
+    user = {};
+  };
   return (
     <>
       <Navbar sticky="top" bg="primary" variant="dark">
@@ -17,19 +19,14 @@ export default function NavBar(props) {
           <Nav.Link as={Link} to="/chatroom">
             Chat Room
           </Nav.Link>
-          <Nav.Link as={Link} to="/userlist">
-            User List
+          <Nav.Link as={Link} to="/profileview">
+            Your Profile
           </Nav.Link>
         </Nav>
         <Nav className="justify-content-end">
-          {user.displayName ? (
-            <Nav.Link as={Link} to="/profile">
-              Hello, {user.displayName}!
-            </Nav.Link>
-          ) : (
-            "   "
-          )}{" "}
-          <Button variant="secondary">Logout</Button>
+          <Button variant="secondary" onClick={handleLogout}>
+            Logout
+          </Button>
         </Nav>
       </Navbar>
     </>

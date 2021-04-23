@@ -1,4 +1,4 @@
-import { GETMESSAGES } from "./store/store";
+// import { GETMESSAGES } from "./store/store";
 
 const baseURL = `http://localhost:3000/`;
 //
@@ -34,7 +34,7 @@ export const getUserList = () => {
 
 export const getUser = (id) => {
   return fetch(baseURL + "/users/:" + id, {
-    method: GET,
+    method: "GET",
     headers: { "Content-Type": "application/json" },
   });
 };

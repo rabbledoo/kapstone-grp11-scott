@@ -1,10 +1,10 @@
 import React from "react";
 import UserCard from "../components/UserCard/UserCard";
-import { getUserList } from "../fetchRequests";
+import { getUser } from "../fetchRequests";
 import { GETUSERLIST, store, useStore } from "../store/store";
 
 const UserList = () => {
-  getUsers().then((userList) =>
+  getUser().then((userList) =>
     store.dispatch({ type: GETUSERLIST, payload: userList })
   );
   const userList = useStore((state) => state.userList);
